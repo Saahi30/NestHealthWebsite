@@ -8,7 +8,24 @@
     <!-- End of headStart -->
     <meta name="viewport" content="width=device-width">
     <meta name="generator" content="Framer">
-    <title>Hanzo — a Design Craftsman's Portfolio Template</title>
+    <title>Nest Health</title>
+    <script>
+        // Ensure the page title remains "Nest Health" even if other scripts modify it.
+        (function(){
+            const enforcedTitle = 'Nest Health';
+            try{ document.title = enforcedTitle; }catch(e){}
+            // Observe changes to the <title> element
+            const titleEl = document.querySelector('title');
+            if (titleEl && window.MutationObserver) {
+                const obs = new MutationObserver(()=>{
+                    if (document.title !== enforcedTitle) document.title = enforcedTitle;
+                });
+                obs.observe(titleEl, { childList: true, characterData: true, subtree: true });
+                // Also enforce every 2s as a fallback
+                setInterval(()=>{ if (document.title !== enforcedTitle) document.title = enforcedTitle; }, 2000);
+            }
+        })();
+    </script>
     <meta name="description" content="Nest Health makes world-class healthcare radically accessible — AI-powered, compassionate care for every family, anytime, anywhere.">
     <meta name="framer-search-index" content="https://framerusercontent.com/sites/5GQRTul1gkJAuk75Q9iaVa/searchIndex-DGaBnPleCWB3.json">
     <meta name="framer-search-index-fallback" content="https://framerusercontent.com/sites/5GQRTul1gkJAuk75Q9iaVa/searchIndex-vAtJW8H0afsW.json">
