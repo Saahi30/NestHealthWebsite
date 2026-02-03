@@ -8503,7 +8503,9 @@
     <style>
         /* Mobile Optimization Overrides */
         @media (max-width: 1440px) {
-            body, html {
+
+            body,
+            html {
                 width: 100%;
                 height: auto !important;
                 overflow: auto !important;
@@ -8511,7 +8513,7 @@
                 margin: 0;
                 padding: 0;
             }
-            
+
             /* Override fixed width containers */
             .framer-mnZtT.framer-1qit58p,
             .framer-QHQDA.framer-18ka4d0 {
@@ -8525,27 +8527,94 @@
             .framer-mnZtT .framer-1qit58p * {
                 max-width: 100%;
             }
-            
+
             /* Adjust padding for smaller screens */
             @media (max-width: 768px) {
+
                 .framer-mnZtT.framer-1qit58p,
                 .framer-QHQDA.framer-18ka4d0 {
-                     padding-left: 16px !important;
-                     padding-right: 16px !important;
-                     padding-top: 20px !important;
-                     padding-bottom: 20px !important;
+                    padding-left: 16px !important;
+                    padding-right: 16px !important;
+                    padding-top: 20px !important;
+                    padding-bottom: 20px !important;
+                }
+            }
+
+            /* Unlock Your Seamless Health Journey Section Fix */
+            .framer-1rmyi70 {
+                display: flex !important;
+                flex-direction: column !important;
+                height: auto !important;
+                width: 100% !important;
+                overflow: visible !important;
+            }
+
+            .framer-14yzez7 h2 {
+                white-space: normal !important;
+                font-size: 32px !important;
+                line-height: 1.2 !important;
+            }
+
+            /* Fix buggy scroll/freeze issues */
+            html.lenis,
+            html.lenis body {
+                height: auto !important;
+            }
+
+            a,
+            button,
+            [role="button"] {
+                pointer-events: auto !important;
+                cursor: pointer !important;
+            }
+
+            /* CRITICAL: Force scroll on mobile */
+            @media (max-width: 810px) {
+
+                html,
+                body {
+                    overflow-y: auto !important;
+                    overflow-x: hidden !important;
+                    height: auto !important;
+                    min-height: 100vh !important;
+                    -webkit-overflow-scrolling: touch !important;
+                    overscroll-behavior-y: auto !important;
+                    touch-action: pan-y !important;
+                }
+
+                #main,
+                .framer-mnZtT {
+                    overflow-y: visible !important;
+                    overflow-x: hidden !important;
+                    height: auto !important;
+                    min-height: 100% !important;
+                    position: relative !important;
+                    display: block !important;
+                }
+
+                /* Ensure fixed elements don't block scroll */
+                .framer-mnZtT .framer-akwmn1 {
+                    position: fixed !important;
+                    z-index: -1 !important;
+                }
+
+                /* Reset Lenis overrides */
+                html.lenis,
+                html.lenis body {
+                    height: auto !important;
+                    overflow: auto !important;
                 }
             }
         }
     </style>
 </head>
 
-<body style="overscroll-behavior: none; overflow: hidden;">
+<body>
     <script async="" src="https://events.framer.com/script?v=2"
         data-fid="5ade224faf60ad50df7e98ade997f2c95949926ebca29d67c59be2e2513df4f5" data-no-nt=""></script>
     <!-- Start of bodyStart -->
     <!-- Plugin: 4547ab -->
-    <script>document.body.style.overscrollBehavior = "none";</script>
+    <script>/* Removing overscroll block to ensure scroll works */</script>
     <!-- Remove and block Framer editor UI (prevents Edit Content button) -->
     <style>
         #__framer-editorbar,
@@ -8633,7 +8702,8 @@
                                 style="--extracted-r6o4lv: var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;">
                                 <p class="framer-text"
                                     style="--font-selector: RlI7SW50ZXJEaXNwbGF5; --framer-font-family: &quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif; --framer-font-size: 25px; --framer-line-height: 1.7em; --framer-text-color: var(--extracted-r6o4lv, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                    <strong class="framer-text">Nest.</strong></p>
+                                    <strong class="framer-text">Nest.</strong>
+                                </p>
                             </div>
                         </a>
                         <div class="framer-yqymta" data-framer-name="menu" style="opacity: 1; border-radius: 24px;">
@@ -8882,7 +8952,8 @@
                                                     style="border: medium; display: none; place-content: center; place-items: center; overflow: hidden; background: rgba(0, 0, 0, 0.2); cursor: pointer; margin: 0px; padding: 0px; width: 40px; height: 40px; border-radius: 40px; pointer-events: auto; transform: rotate(90deg);"><img
                                                         decoding="async" width="40" height="40"
                                                         src="https://framerusercontent.com/images/11KSGbIZoRSg4pjdnUoif6MKHI.svg"
-                                                        alt="Next Arrow"></button></div>
+                                                        alt="Next Arrow"></button>
+                                            </div>
                                         </fieldset>
                                     </section>
                                 </div>
@@ -8976,7 +9047,8 @@
                                             style="display: inline-block; will-change: transform;">f</span><span
                                             style="display: inline-block; will-change: transform;">o</span><span
                                             style="display: inline-block; will-change: transform;">r</span></span> <span
-                                        style="white-space: nowrap;"></span></h1>
+                                        style="white-space: nowrap;"></span>
+                                </h1>
                             </div>
                             <div class="framer-d5p526" data-framer-component-type="RichTextContainer"
                                 style="transform: none;">
@@ -9017,7 +9089,8 @@
                                         <p class="framer-text framer-styles-preset-21ogod"
                                             data-styles-preset="xZndidUCt"
                                             style="--framer-text-color: var(--extracted-r6o4lv, var(--token-cd9f24d5-f0ad-4213-bead-63c4e991dc40, rgb(255, 255, 255)));">
-                                            <strong class="framer-text">Pre-Launch Access</strong></p>
+                                            <strong class="framer-text">Pre-Launch Access</strong>
+                                        </p>
                                     </div>
                                     <div class="framer-r8vf06" data-framer-name="icon" style="opacity: 1;">
                                         <div class="framer-fdi9yo-container" style="opacity: 0.5;">
@@ -9552,7 +9625,8 @@
                                     style="--extracted-r6o4lv: var(--token-cd9f24d5-f0ad-4213-bead-63c4e991dc40, rgb(255, 255, 255)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; transform: none; opacity: 1;">
                                     <p class="framer-text"
                                         style="--font-selector: RlI7SW50ZXJEaXNwbGF5; --framer-font-family: &quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif; --framer-line-height: 1.7em; --framer-text-alignment: center; --framer-text-color: var(--extracted-r6o4lv, var(--token-cd9f24d5-f0ad-4213-bead-63c4e991dc40, rgb(255, 255, 255)));">
-                                        <strong class="framer-text">Read Recent Work</strong></p>
+                                        <strong class="framer-text">Read Recent Work</strong>
+                                    </p>
                                 </div>
                             </div>
                         </a></div>
@@ -9588,7 +9662,8 @@
                                     style="opacity: 0.2;">instant, </span><span style="opacity: 0.2;">world-class
                                 </span><span style="opacity: 0.2;">healthcare, </span><span
                                     style="opacity: 0.2;">tailored </span><span style="opacity: 0.2;">just </span><span
-                                    style="opacity: 0.2;">for </span><span style="opacity: 0.2;">you. </span></p>
+                                    style="opacity: 0.2;">for </span><span style="opacity: 0.2;">you. </span>
+                            </p>
                         </div>
                         <div class="framer-n5xeho-container"
                             style="will-change: transform; opacity: 0; transform: translateX(150px) translateY(58px) rotate(13deg);">
@@ -10481,7 +10556,8 @@
                                                             style="--extracted-1of0zx5: var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; --extracted-1eung3n: var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)); opacity: 0.25; transform: none;">
                                                             <h4 class="framer-text"
                                                                 style="--font-selector: RlI7SW50ZXJEaXNwbGF5; --framer-font-family: &quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif; --framer-font-size: 20px; --framer-letter-spacing: -0.02em; --framer-line-height: 1.5em; --framer-text-color: var(--extracted-1eung3n, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                                                <strong class="framer-text">"</strong></h4>
+                                                                <strong class="framer-text">"</strong>
+                                                            </h4>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -10774,7 +10850,8 @@
                                                     <p class="framer-text framer-styles-preset-21ogod"
                                                         data-styles-preset="xZndidUCt"
                                                         style="--framer-text-color: var(--extracted-r6o4lv, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                                        <strong class="framer-text">Rajdeep Singh</strong></p>
+                                                        <strong class="framer-text">Rajdeep Singh</strong>
+                                                    </p>
                                                 </div>
                                                 <div class="framer-4au6qu"
                                                     data-framer-component-type="RichTextContainer"
@@ -10955,7 +11032,8 @@
                                             style="--extracted-1of0zx5: var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0.25; transform: none;">
                                             <h2 class="framer-text"
                                                 style="--font-selector: RlI7SW50ZXJEaXNwbGF5; --framer-font-family: &quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif; --framer-font-size: 44px; --framer-letter-spacing: -0.04em; --framer-line-height: 1.4em; --framer-text-color: var(--extracted-1of0zx5, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                                <strong class="framer-text">"</strong></h2>
+                                                <strong class="framer-text">"</strong>
+                                            </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -10986,7 +11064,8 @@
                                                     <p class="framer-text framer-styles-preset-21ogod"
                                                         data-styles-preset="xZndidUCt"
                                                         style="--framer-text-color: var(--extracted-r6o4lv, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                                        <strong class="framer-text">Saahi Dubey</strong></p>
+                                                        <strong class="framer-text">Saahi Dubey</strong>
+                                                    </p>
                                                 </div>
                                                 <div class="framer-4au6qu"
                                                     data-framer-component-type="RichTextContainer"
@@ -11147,7 +11226,8 @@
                                             style="--extracted-1of0zx5: var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)); --framer-link-text-color: rgb(0, 153, 255); --framer-link-text-decoration: underline; opacity: 0.25; transform: none;">
                                             <h2 class="framer-text"
                                                 style="--font-selector: RlI7SW50ZXJEaXNwbGF5; --framer-font-family: &quot;Inter Display&quot;, &quot;Inter Display Placeholder&quot;, sans-serif; --framer-font-size: 44px; --framer-letter-spacing: -0.04em; --framer-line-height: 1.4em; --framer-text-color: var(--extracted-1of0zx5, var(--token-00af65c3-92fd-4f69-9228-cfe71d95f29a, rgb(0, 0, 0)));">
-                                                <strong class="framer-text">"</strong></h2>
+                                                <strong class="framer-text">"</strong>
+                                            </h2>
                                         </div>
                                     </div>
                                 </div>
@@ -11448,7 +11528,8 @@
                                                 data-styles-preset="yCCIjz3lb"
                                                 style="--framer-text-color: var(--extracted-1eung3n, var(--token-547b5c15-77fe-4f79-a0d6-e024d7d798f1, rgba(255, 255, 255, 0.5)));">
                                                 <em class="framer-text">The Wait Won’t Be Long. The Impact Will Be
-                                                    Huge.</em></h4>
+                                                    Huge.</em>
+                                            </h4>
                                         </div>
                                         <div class="framer-jmibp8"
                                             style="background: linear-gradient(270deg, rgba(84, 84, 84, 0) 0%, var(--token-cd9f24d5-f0ad-4213-bead-63c4e991dc40, rgb(255, 255, 255)) 100%); opacity: 0.5;">
@@ -11479,7 +11560,8 @@
                                                 <div style="position: relative; top: 0px; right: 0px; bottom: 0px;">
                                                     <input type="submit"
                                                         style="appearance: none; width: 100%; height: 100%; outline: currentcolor; border: medium; cursor: pointer; padding: 15px; border-radius: 8px; font-size: 16px; background: rgb(51, 51, 51); color: rgb(255, 255, 255); z-index: 1; box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px;"
-                                                        value="Notify me"></div>
+                                                        value="Notify me">
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
@@ -11589,7 +11671,8 @@
                                                 <p class="framer-text framer-styles-preset-21ogod"
                                                     data-styles-preset="xZndidUCt"
                                                     style="--framer-text-color: var(--extracted-r6o4lv, var(--token-cd9f24d5-f0ad-4213-bead-63c4e991dc40, rgb(255, 255, 255)));">
-                                                    <strong class="framer-text">Book a Discovery Call</strong></p>
+                                                    <strong class="framer-text">Book a Discovery Call</strong>
+                                                </p>
                                             </div>
                                             <div class="framer-r8vf06" data-framer-name="icon" style="opacity: 1;">
                                                 <div class="framer-fdi9yo-container" style="opacity: 0.5;">
@@ -12049,6 +12132,43 @@
             console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
         }
         // ]]>
+    </script>
+    <script>
+        /* Mobile Scroll Enforcer */
+        (function () {
+            if (window.innerWidth > 810) return;
+
+            function allowScroll() {
+                var html = document.documentElement;
+                var body = document.body;
+                var main = document.getElementById('main');
+                var framer = document.querySelector('.framer-mnZtT');
+
+                [html, body].forEach(el => {
+                    el.style.setProperty('overflow-y', 'auto', 'important');
+                    el.style.setProperty('height', 'auto', 'important');
+                    el.style.setProperty('touch-action', 'pan-y', 'important');
+                    el.style.removeProperty('overscroll-behavior');
+                });
+
+                if (framer) {
+                    framer.style.setProperty('overflow', 'visible', 'important');
+                    framer.style.setProperty('height', 'auto', 'important');
+                    framer.style.setProperty('position', 'relative', 'important');
+                }
+
+                // Nuke Lenis if detected
+                if (window.lenis && typeof window.lenis.destroy === 'function') {
+                    window.lenis.destroy();
+                    window.lenis = null;
+                }
+            }
+
+            window.addEventListener('load', allowScroll);
+            window.addEventListener('resize', allowScroll);
+            setInterval(allowScroll, 2000); // Periodic check to fight re-hydration
+            allowScroll();
+        })();
     </script>
 </body>
 
