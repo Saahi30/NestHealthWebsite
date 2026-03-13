@@ -13,6 +13,19 @@
     <link rel="icon" type="image/png"
         href="https://res.cloudinary.com/deyr3lddb/image/upload/v1759693967/9-removebg-preview_wqyere.png">
     <title>Nest Health</title>
+    <!-- SEO and Social Meta Tags -->
+    <meta name="description" content="Nest Health - Transforming lives with clarity, compassion, and relentless purpose.">
+    <!-- Open Graph (Facebook/LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nest Health">
+    <meta property="og:description" content="Nest Health - Transforming lives with clarity, compassion, and relentless purpose.">
+    <meta property="og:image" content="https://res.cloudinary.com/deyr3lddb/image/upload/v1759693967/9-removebg-preview_wqyere.png">
+    <meta property="og:url" content="https://nesthealth.in"> <!-- Update this with your actual production domain if different -->
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nest Health">
+    <meta name="twitter:description" content="Nest Health - Transforming lives with clarity, compassion, and relentless purpose.">
+    <meta name="twitter:image" content="https://res.cloudinary.com/deyr3lddb/image/upload/v1759693967/9-removebg-preview_wqyere.png">
     <style data-framer-font-css="">
         @font-face {
             font-family: "Inter";
@@ -11552,7 +11565,7 @@
                                             <form
                                                 style="width: 100%; height: auto; display: flex; position: relative; flex-direction: row; color: rgb(255, 255, 255); gap: 10px;"
                                                 method="POST"><input type="email" name="email"
-                                                    placeholder="Email address" class="v1 framer-custom-input"
+                                                    placeholder="Email address" aria-label="Email address" class="v1 framer-custom-input"
                                                     autocomplete="off" autocapitalize="off" autocorrect="off"
                                                     spellcheck="false" data-1p-ignore="true"
                                                     style="appearance: none; width: 100%; height: auto; outline: currentcolor; border: medium; padding: 15px; border-radius: 8px; font-size: 16px; background: rgb(235, 235, 235); color: rgb(0, 0, 0);"
@@ -12138,23 +12151,21 @@
         (function () {
             if (window.innerWidth > 810) return;
 
-            function allowScroll() {
-                var html = document.documentElement;
-                var body = document.body;
-                var main = document.getElementById('main');
-                var framer = document.querySelector('.framer-mnZtT');
-
-                [html, body].forEach(el => {
-                    el.style.setProperty('overflow-y', 'auto', 'important');
-                    el.style.setProperty('height', 'auto', 'important');
-                    el.style.setProperty('touch-action', 'pan-y', 'important');
-                    el.style.removeProperty('overscroll-behavior');
-                });
-
-                if (framer) {
-                    framer.style.setProperty('overflow', 'visible', 'important');
-                    framer.style.setProperty('height', 'auto', 'important');
-                    framer.style.setProperty('position', 'relative', 'important');
+            function initMobileScroll() {
+                // Inject CSS to forcefully override overflow and height on mobile wrappers
+                if (!document.getElementById('mobile-scroll-enforcer-css')) {
+                    var style = document.createElement('style');
+                    style.id = 'mobile-scroll-enforcer-css';
+                    style.innerHTML = `
+                        html, body, #main, #hero, .framer-mnZtT, .framer-1ptyt9c {
+                            overflow-y: auto !important;
+                            overflow-x: hidden !important;
+                            height: auto !important;
+                            touch-action: pan-y !important;
+                            overscroll-behavior: auto !important;
+                        }
+                    `;
+                    document.head.appendChild(style);
                 }
 
                 // Nuke Lenis if detected
@@ -12162,12 +12173,42 @@
                     window.lenis.destroy();
                     window.lenis = null;
                 }
+                
+                // Remove lenis classes which might apply overflow: hidden
+                document.documentElement.classList.remove('lenis', 'lenis-smooth', 'lenis-scrolling', 'lenis-stopped');
+                document.body.classList.remove('lenis', 'lenis-smooth', 'lenis-scrolling', 'lenis-stopped');
             }
 
-            window.addEventListener('load', allowScroll);
-            window.addEventListener('resize', allowScroll);
-            setInterval(allowScroll, 2000); // Periodic check to fight re-hydration
-            allowScroll();
+            window.addEventListener('load', initMobileScroll);
+            window.addEventListener('resize', initMobileScroll);
+            setInterval(initMobileScroll, 2000); // Periodic check to fight re-hydration
+            initMobileScroll();
+        })();
+    </script>
+    <script>
+        /* Image Lazy Loading Enforcer */
+        (function() {
+            function enforceLazyLoading() {
+                // Select all images on the page
+                const images = document.querySelectorAll('img');
+                
+                // Get the hero section to avoid lazy-loading above-the-fold images
+                const hero = document.getElementById('hero');
+                const heroImages = hero ? Array.from(hero.querySelectorAll('img')) : [];
+                
+                images.forEach(img => {
+                    // If the image is not in the hero section, give it loading="lazy"
+                    if (!heroImages.includes(img) && !img.hasAttribute('loading')) {
+                        img.setAttribute('loading', 'lazy');
+                    }
+                });
+            }
+            
+            // Run on load and also closely observe for dynamic Framer images
+            window.addEventListener('load', enforceLazyLoading);
+            
+            // Re-run periodically as Framer sometimes rehydrates images
+            setInterval(enforceLazyLoading, 2000);
         })();
     </script>
 </body>
