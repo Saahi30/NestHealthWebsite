@@ -1,4 +1,28 @@
+# robots.txt — Nest Health (nesthealth.in)
+# Allow all crawlers full access
+
 User-agent: *
 Allow: /
+Disallow: /404
 
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 5
+
+# Google Image Bot
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 5
+
+# Allow CSS and JS for full rendering
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+
+# Sitemap location
 Sitemap: https://nesthealth.in/sitemap.xml

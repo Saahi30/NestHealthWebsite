@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nesthealth.in/</loc>
     <lastmod>2026-03-14</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://res.cloudinary.com/deyr3lddb/image/upload/v1759693967/9-removebg-preview_wqyere.png</image:loc>
+      <image:title>Nest Health – Transforming Lives with Clarity &amp; Compassion</image:title>
+      <image:caption>Nest Health is India's trusted healthcare platform dedicated to family wellbeing and professional care.</image:caption>
+    </image:image>
   </url>
 </urlset>
